@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/public/styles.css" rel="stylesheet">
+    <script src="/public/bootstrap/js/bootstrap.js"></script>
+    <title>Vehicle Registration</title>
+</head>
+
+<body class="bg-wrap-reg">
+
+    <div>
+        <img class="img-bg" src="../public/images/bob-flavin-pic.jpg" alt="Image">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <div class="container">
+                <a class="nav-link nav-item" href="#">Parking</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="nav me-auto mb-2 mb-lg-0 ">
+                        <li class="nav-item">
+                            <a class="nav-link nav-item" aria-current="page" href="#">Add Vehicle/Boda Boda</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link nav-item dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Generate Report
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Parking Report</a></li>
+                                <li><a class="dropdown-item" href="#">Sign-off Report</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- This is the logout button -->
+                    <form class="d-flex ">
+                        <button class="btn btn-outline-success logout-button" type="submit">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- End of the nav bar -->
+
+
+        <!-- Start of the form section -->
+        <div class=" container py-5 h-100 ">
+            <div class="container row justify-content-center ">
+                <div class="col col-xl-10">
+                    <div class="card bg-light ">
+                        <div class="container col-md-8">
+
+
+
+                            <form class="form-horizontal regform" role="form">
+                                <h2> Tyre Clinic</h2>
+
+                                <div class="form-group">
+                                    <label for="tyre make" class="col-sm-3 control-label"><b>Tyre make</b></label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" name="tyre" autofocus>
+                                            <option value="Default" selected="">Click to Select type of tyre</option>
+                                            <option value="pirelli">Pirelli</option>
+                                            <option value="Michelin">Michelin</option>
+                                            <option value="Goodyear">Goodyear</option>
+                                            <option value="Dunlop">Dunlop</option>
+                                            <option value="Continental">Continental</option>
+                                            <option value="Bridgestone">Bridgestone</option>
+
+                                        </select>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label for="tyre make" class="col-sm-3 control-label"><b>Tyre size</b></label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" name="tyresize" autofocus>
+                                                <option value="Default" selected="">Click to Select tyre size</option>
+                                                <option value="135/70 R13">135/70 R13</option>
+                                                <option value="135/80 R12">135/80 R12</option>
+                                                <option value="145/60 R13">145/60 R13</option>
+                                                <option value="145/70 R12">145/70 R12</option>
+                                                <option value="155/55 R14">155/55 R14</option>
+                                                <option value="155/65 R14">155/65 R14</option>
+
+                                            </select>
+                                        </div>
+
+
+                                    </div>
+
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="email" class="col-sm-3 control-label"><b>Car Model</b> </label>
+                                        <div class="col-sm-9">
+                                            <input type="text" id="carModel" placeholder="Car Model"
+                                                class="form-control" name="carmodel">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <hr width="365" size="10" style="color:blue;">
+                                    <br>
+                                    <h3>Car Tyre Services</h3>
+                                    <br>
+                                    <div class="form-group">
+                                        <label for="tyre pressure" class="col-sm-3 control-label"><b>Tyre
+                                                pressure</b></label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" name="tyrepressure" autofocus>
+                                                <option value="Default" selected="">Click to Select tyre pressure amount
+                                                </option>
+                                                <option value="500">500</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label for="puncture" class="col-sm-3 control-label"><b>Puncture
+                                                fixing</b></label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" name="puncture" autofocus>
+                                                <option value="Default" selected="">Click to add puncture fixing amount
+                                                </option>
+                                                <option value="500">5000</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="form-group">
+                                        <label for="valves" class="col-sm-3 control-label"><b>Valves</b></label>
+                                        <div class="col-sm-9">
+                                            <select class="form-control" name="valves" autofocus>
+                                                <option value="Default" selected="">Click to add valves amount</option>
+                                                <option value="500">5000</option>
+                                            </select>
+                                        </div>
+                                        <br>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="birthDate" class="col-sm-3 control-label"><b>Date</b></label>
+                                        <div class="col-sm-9">
+                                            <input type="date" id="entryDate" class="form-control">
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <br>
+
+
+                                    <button type="submit" class="btn btn-primary btn-block"
+                                        style="margin-left: 70px;">Register</button>
+
+
+                                    <button type="reset" class="btn btn-primary btn-block"
+                                        style="margin-left: 60px;">Clear</button>
+
+
+                            </form> <!-- /form -->
+                        </div> <!-- ./container -->
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue bg-light">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2022 Copyright:
+            <a href="/"> Parkville Day and Night Parking</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+</body>
+
+</html>

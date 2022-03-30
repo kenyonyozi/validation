@@ -1,0 +1,108 @@
+extends layout 
+
+block content 
+    .container.py-4.h-100
+    .row.justify-content-center
+      .col.col-xl-8
+        .card.bg-light
+          .container.col-md-9
+            .container
+              form.form-horizontal.regform(role='form' action='/vehicleRegister' method='POST')
+                h2  Add Vehicle
+                .form-group
+                  label.col-sm-3.control-label(for='vehicleType')
+                    b Vehicle Type*
+                  .col-sm-9
+                    select.form-control(name='vehicle' autofocus='' required)
+                      option(value='Default' selected='') Click to Select Type of Vehicle
+                      option(value='trucks') Truck
+                      option(value='PersonalCars') Personal Car
+                      option(value='taxi') Taxi
+                      option(value='costers') Coaster
+                      option(value='bodas') Boda-Boda
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='numberPlate')
+                    b Number Plate*
+                  .col-sm-9
+                    input#numberplate.form-control(type='text' placeholder='Car Number Plate' autofocus='' name='numberPlate' required)
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='model')
+                    b Model*
+                  .col-sm-9
+                    input#carcolor.form-control(type='text' placeholder='Car Model' name='carModel' required)
+                br
+
+                .form-group
+                  label.col-sm-3.control-label(for='model')
+                    b Color
+                  .col-sm-9
+                    input#carcolor.form-control(type='text' placeholder='Vehicle color' name='carColor' required)
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='driverName')
+                    b Driver Name*
+                  .col-sm-9
+                    input#drivername.form-control(type='text' placeholder='Name of the driver' name='driverName' required)
+                br
+
+                .form-group
+                  label.col-sm-3.control-label(for='driverName')
+                    b Driver NIN
+                  .col-sm-9
+                    input#drivernin.form-control(type='text' placeholder='Name of the driver' name='driverNin' required)
+                br
+                // Adding phone number,
+                .form-group
+                  label.col-sm-3.control-label(for='phoneNumber')
+                    b Phone number* 
+                  .col-sm-9
+                    input#phoneNumber.form-control(type='phoneNumber' placeholder='Phone number' name='phoneNumber' required)
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='entryDate')
+                    b Date*
+                  .col-sm-9
+                    input#entryDate.form-control(type='date' name='entryDate' required)
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='time')
+                    b Entry Time*
+                  .col-sm-9
+                    input#entryTime.form-control(type='time' placeholder='Enter Entry time' name ='entryTime' required)
+                  br
+                  .form-group
+                  label.col-sm-3.control-label(for='vehicleType')
+                    b Time of parking
+                  .col-sm-9
+                    select.form-control(name='parkingtime' autofocus='' required)
+                      option(value='Default' selected='') Click to Select period
+                      option(value='Day') Day
+                      option(value='Night') Night
+                      option(value='Less than 3 hours') Less than 3 hours
+                      
+                br
+                
+
+                .form-group
+                  label.col-sm-3.control-label(for='vehicleType')
+                    b Amount*
+                  .col-sm-9
+                    select.form-control(name='amount' autofocus='' required)
+                      option(value='Default' selected='') Click to Select amount
+                      option(value='1000') 1,000
+                      option(value='2000') 2,000
+                      option(value='3000') 3,000
+                      option(value='4000') 4,000
+                      option(value='5000') 5,000
+                      option(value='10000') 10,000
+                br
+
+                .form-group
+                  .col-sm-9.col-sm-offset-3
+                    span.help-block * All fields required
+                br
+
+                button.btn.btn-primary.btn-block(type='submit' style='margin-left: 70px;') Register
+                button.btn.btn-primary.btn-block(type='reset' style='margin-left: 60px;') Clear

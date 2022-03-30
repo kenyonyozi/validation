@@ -1,0 +1,92 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='/bootstrap/css/bootstrap.css' rel='stylesheet')
+  link(href='/styles.css' rel='stylesheet')
+  script(src='/bootstrap/js/bootstrap.js')
+  title Vehicle Registration
+div
+  img.img-bg(src='../images/bob-flavin-pic.jpg' alt='Image')
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container
+      a.nav-link.nav-item(href='#') Parking
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.nav.me-auto.mb-2.mb-lg-0
+          li.nav-item
+            a.nav-link.nav-item(aria-current='page' href='#') Add Vehicle/Boda Boda
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.nav-item.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+              | Generate Report
+            ul.dropdown-menu(aria-labelledby='navbarDropdown')
+              li
+                a.dropdown-item(href='#') Parking Report
+              li
+                a.dropdown-item(href='#') Sign-off Report
+        // This is the logout button
+        form.d-flex
+          button.btn.btn-outline-success.logout-button(type='submit') Logout
+  // End of the nav bar
+  // Start of the form section
+  .container.py-5.h-100
+    .container.row.justify-content-center
+      .col.col-xl-10
+        .card.bg-light
+          .container.col-md-8
+            form.form-horizontal.regform(role='form' action = '/battery' method ='POST')
+              h2  Battery Registration
+              .form-group
+                label.col-sm-3.control-label(for='firstName')
+                  b Battery size
+                .col-sm-9
+                  select.form-control(name='battery' autofocus='')
+                    option(value='Default' selected='') Select battery size
+                    option(value='24') 24
+                    option(value='24F') 24F
+                    option(value='25') 25
+                    option(value='34') 34
+                    option(value='51') 51
+                    option(value='51R') 51R
+                    option(value='51') 52
+              
+              // Adding phone number,
+              br
+              .form-group
+                label.col-sm-3.control-label(for='birthDate')
+                  b Date*
+                .col-sm-9
+                  input#entryDate.form-control(type='date' name ='date')
+                br
+
+                .form-group
+                  label.col-sm-3.control-label(for='vehicleType')
+                    b Amount*
+                  .col-sm-9
+                    select.form-control(name='amount' autofocus='' required)
+                      option(value='Default' selected='') Click to Select amount
+                      option(value='5000') 5,000
+                      option(value='10000') 10,000
+                      option(value='15000') 15,000
+                      option(value='20000') 20,000
+                      option(value='25000') 25,000
+                      option(value='30000') 30,000
+              br
+              .form-group
+                .col-sm-9.col-sm-offset-3
+                  span.help-block * All fields required
+              br
+              button.btn.btn-primary.btn-block(type='submit' style='margin-left: 70px;') Register
+              button.btn.btn-primary.btn-block(type='reset' style='margin-left: 60px;') Clear
+            // /form
+          // ./container
+// Footer
+footer.page-footer.font-small.blue.bg-light
+  // Copyright
+  .footer-copyright.text-center.py-3
+    | &copy; 2022 Copyright:
+    a(href='/')  Parkville Day and Night Parking
+  // Copyright
+// Footer

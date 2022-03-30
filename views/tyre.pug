@@ -1,0 +1,130 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='/bootstrap/css/bootstrap.css' rel='stylesheet')
+  link(href='/styles.css' rel='stylesheet')
+  script(src='/bootstrap/js/bootstrap.js')
+  title Vehicle Registration
+div
+  img.img-bg(src='../images/bob-flavin-pic.jpg' alt='Image')
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container
+      a.nav-link.nav-item(href='#') Parking
+      button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.nav.me-auto.mb-2.mb-lg-0
+          li.nav-item
+            a.nav-link.nav-item(aria-current='page' href='#') Add Vehicle/Boda Boda
+          li.nav-item.dropdown
+            a#navbarDropdown.nav-link.nav-item.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+              | Generate Report
+            ul.dropdown-menu(aria-labelledby='navbarDropdown')
+              li
+                a.dropdown-item(href='#') Parking Report
+              li
+                a.dropdown-item(href='#') Sign-off Report
+        // This is the logout button
+        form.d-flex
+          button.btn.btn-outline-success.logout-button(type='submit') Logout
+  // End of the nav bar
+  // Start of the form section
+  .container.py-5.h-100
+    .container.row.justify-content-center
+      .col.col-xl-10
+        .card.bg-light
+          .container.col-md-8
+            form.form-horizontal.regform(role='form' action='/tyre' method='POST')
+              h2  Tyre Clinic
+              .form-group
+                label.col-sm-3.control-label(for='tyre make')
+                  b Tyre make
+                .col-sm-9
+                  select.form-control(name='tyre' autofocus='')
+                    option(value='Default' selected='') Click to Select type of tyre
+                    option(value='pirelli') Pirelli
+                    option(value='Michelin') Michelin
+                    option(value='Goodyear') Goodyear
+                    option(value='Dunlop') Dunlop
+                    option(value='Continental') Continental
+                    option(value='Bridgestone') Bridgestone
+                    option(value='') null
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='tyre size')
+                    b Tyre size
+                  .col-sm-9
+                    select.form-control(name='tyresize' autofocus='')
+                      option(value='Default' selected='') Click to Select tyre size
+                      option(value='135/70 R13') 135/70 R13
+                      option(value='135/80 R12') 135/80 R12
+                      option(value='145/60 R13') 145/60 R13
+                      option(value='145/70 R12') 145/70 R12
+                      option(value='155/55 R14') 155/55 R14
+                      option(value='155/65 R14') 155/65 R14
+                      option(value='') null
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='car model')
+                    b Car Model
+                  .col-sm-9
+                    input#carModel.form-control(type='text' placeholder='Car Model' name='carmodel')
+                br
+                hr(width='365' size='10' style='color:blue;')
+                br
+                h3 Car Tyre Services
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='tyre pressure')
+                    b
+                      | Tyre
+                      | pressure
+                  .col-sm-9
+                    select.form-control(name='tyrepressure' autofocus='')
+                      option(value='Default' selected='')
+                        | Click to Select tyre pressure amount
+                      option(value='500') 500
+                      option(value='') null
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='puncture')
+                    b
+                      | Puncture
+                      | fixing
+                  .col-sm-9
+                    select.form-control(name='puncture' autofocus='')
+                      option(value='Default' selected='')
+                        | Click to add puncture fixing amount
+                      option(value='500') 5000
+                      option(value='') null
+                br
+                .form-group
+                  label.col-sm-3.control-label(for='valves')
+                    b Valves
+                  .col-sm-9
+                    select.form-control(name='valves' autofocus='')
+                      option(value='Default' selected='') Click to add valves amount
+                      option(value='500') 5000
+                      option(value='') null
+                  br
+                .form-group
+                  label.col-sm-3.control-label(for='birthDate')
+                    b Date
+                  .col-sm-9
+                    input#entryDate.form-control(type='date' name='date')
+                br
+                br
+                button.btn.btn-primary.btn-block(type='submit' style='margin-left: 70px;') Register
+                button.btn.btn-primary.btn-block(type='reset' style='margin-left: 60px;') Clear
+            // /form
+          // ./container
+// Footer
+footer.page-footer.font-small.blue.bg-light
+  // Copyright
+  .footer-copyright.text-center.py-3
+    | &copy; 2022 Copyright:
+    a(href='/')  Parkville Day and Night Parking
+  // Copyright
+// Footer
