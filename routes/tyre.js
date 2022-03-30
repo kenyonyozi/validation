@@ -20,7 +20,7 @@ router.post('/tyre', (req, res) => {
 
     let errors = req.validationErrors();
     if(errors){
-        res.render('/tyre');
+        res.render('tyre');
     }
 
     else{
@@ -43,7 +43,7 @@ router.post('/tyre', (req, res) => {
             }
 
             else{
-                res.render('/home')
+                res.redirect('/home')
             }
         });
     }
